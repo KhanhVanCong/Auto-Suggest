@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./autosuggest/autosuggest.css">
+<script src="./autosuggest/autosuggest.js"></script>
+</head>     
+<body>
+  <div class="container">
+    <h2>Hello! Welcome to my Auto Suggest Features</h2>
+    
+    <form autosuggest="off" action="/action_page.php">
+      <div class="autosuggest" style="width:300px;">
+        <input id="my-input" type="text" name="product" placeholder="Product">
+      </div>
+      <input type="submit">
+    </form>
+
+  </div>
+
+<script>
+/* Call auto suggest function*/
+ new autosuggest(document.getElementById("my-input"), {
+   numChar: 1,
+   limitNum: 2,
+   orderBlock: ["suggest", "collection", "product"]
+ });
+</script>
+
+</body>
+</html>
